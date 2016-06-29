@@ -108,7 +108,9 @@ export class DataTable {
   }
 
   checkDisabled(action, row) {
+    console.log('ONE', row);
     if (typeof action.disabled === 'function') {
+      console.log('TWO');
       return action.disabled(row);
     }
     return false;
